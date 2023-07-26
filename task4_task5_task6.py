@@ -3,7 +3,7 @@ import pandas as pd
 def task4_task5_task6(df):
     df['income'] = df['price'] * df['quantity']
     df['expenses'] = df['highway_cost'] * df['quantity']
-    df['profit'] = df['income'] - df['expenses']
+    df['profit'] = df['income'] + df['expenses']
 
     warehouse_product_df = df.groupby(['warehouse_name', 'product']).agg(
         quantity=('quantity', 'sum'),

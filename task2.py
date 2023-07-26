@@ -1,7 +1,7 @@
 def task2(df):
     df['income'] = df['price'] * df['quantity']
     df['expenses'] = df['highway_cost'] * df['quantity']
-    df['profit'] = df['income'] - df['expenses']
+    df['profit'] = df['income'] + df['expenses']
 
     result_df = df.groupby('product').agg(
         quantity=('quantity', 'sum'),

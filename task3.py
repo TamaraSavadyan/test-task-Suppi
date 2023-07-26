@@ -1,7 +1,7 @@
 def task3(df):
     df['income'] = df['price'] * df['quantity']
     df['expenses'] = df['highway_cost'] * df['quantity']
-    df['profit'] = df['income'] - df['expenses']
+    df['profit'] = df['income'] + df['expenses']
 
     order_profit_df = df.groupby('order_id')['profit'].sum().reset_index()
 
